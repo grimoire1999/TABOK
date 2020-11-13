@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>TABOK | Travelling Residents and Non-Residents Automated Documentation System Using QRcode</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+            <p>ad</p>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="NewEntryDrop" role="button" data-toggle="dropdown">New Entry</a>
+                            <div class="dropdown-menu dropdown-menu-left" aria-labelledby="NewEntryDrop">
+                                <a class="dropdown-item" href="#">Resident</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Non-Resident</a>
+                            </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="card w-75 my-auto shadow">
+                    <div class="card-header text-left bg-primary text-white">
+                        <h2>Resident Health Declaration Checklist</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                                <div class="col-lg-12">
+                                        <form action="" method="" class="form-group">
+                                            <h4>A. Personal Information</h4>
+                                                <br>
+                                            <div for="name">
+                                                <label><small><b>Name:</b></small></label>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-4">                            
+                                                   <input type="text" name="lname" class="form-control" placeholder="Last Name">
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <input type="text" name="fname" class="form-control" placeholder="First Name">
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <input type="text" name="mname" class="form-control" placeholder="Middle Name">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-lg-2">
+                                                    <label for="sex"><small><b>Sex</b></small></label>
+                                                    <select class="form-control" id="sex">
+                                                      <option>Male</option>
+                                                      <option>Female</option>
+                                                      <option>Other</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <label for="nationality"><small><b>Nationality</b></small></label>
+                                                    <input type="text" name="nationality" class="form-control" id="nationality">
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <label><small><b>Civil Status</b></small></label>
+                                                    <select class="form-control" id="civil_stat">
+                                                      <option>Single</option>
+                                                      <option>Married</option>
+                                                      <option>Widow/Widower</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <label><small><b>Contact Number</b></small></label>
+                                                    <input type="text" name="contactnum" class="form-control" >
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <label><small><b>Temperature (°C)</b></small></label>
+                                                    <input type="text" name="contactnum" class="form-control" >
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-lg-8">
+                                                    <label for="civil_stat"><small><b>Address</b></small></label>
+                                                    <input type="text" name ="address" class="form-control">
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <label for="civil_stat"><small><b>Occupation</b></small></label>
+                                                    <input type="text" name ="occupation" class="form-control">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-lg-2">
+                                                    <label><small><b>Employed?</b></small></label>
+                                                    <select class="form-control" id="Employed?">
+                                                        <option>Yes</option>
+                                                        <option>No</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <label><small><b>If yes, please answer the following:</b></small></label>
+                                                    <input type="text" name ="agency_company" class="form-control" placeholder="Agency/Company">
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <label><small>*</small></label>
+                                                    <input type="text" name ="employment" class="form-control" placeholder="Place of Employment">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <hr>
+                                            <h4>B. Checkbox</h4>
+                                            <br>
+                                            <h6 style="margin-right: 20px;">Check if you have any of the following at present or during the past 14 days:</h6>
+                                            <br>
+                                            <div class="row col-lg-12">
+                                                <div class="form-check-inline col-lg-2">
+                                                    <input class="form-check-input" type="checkbox" value="" id="fever">
+                                                    <label class="form-check-label" for="fever">Fever</label>
+                                                </div>
+                                                <div class="form-check-inline col-lg-2">
+                                                    <input class="form-check-input" type="checkbox" value="" id="cough">
+                                                    <label class="form-check-label" for="cough">Cough</label>
+                                                </div>
+                                                <div class="form-check-inline col-lg-2">
+                                                    <input class="form-check-input" type="checkbox" value="" id="diarrhea">
+                                                    <label class="form-check-label" for="Diarrhea">Diarrhea</label>
+                                                </div>
+                                                <div class="form-check-inline col-lg-2">
+                                                    <input class="form-check-input" type="checkbox" value="" id="colds">
+                                                    <label class="form-check-label" for="colds">Colds</label>
+                                                </div>
+                                            </div>
+                                            <div class="row col-lg-12">
+                                                <div class="form-check-inline col-lg-2">
+                                                    <input class="form-check-input" type="checkbox" value="" id="headache">
+                                                    <label class="form-check-label" for="headache">Headache</label>
+                                                </div>
+                                                <div class="form-check-inline col-lg-2">
+                                                    <input class="form-check-input" type="checkbox" value="" id="run_nose">
+                                                    <label class="form-check-label" for="run_nose">Runny Nose</label>
+                                                </div>
+                                                <div class="form-check-inline col-lg-2">
+                                                    <input class="form-check-input" type="checkbox" value="" id="sore_throat">
+                                                    <label class="form-check-label" for="sore_throat">Sore Throat</label>
+                                                </div>
+                                                <div class="form-check-inline col-lg-2">
+                                                    <input class="form-check-input" type="checkbox" value="" id="vomit">
+                                                    <label class="form-check-label" for="vomit">Vomiting</label>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <hr>
+                                            <h4>C. Questionnaires</h4>
+                                            <br>
+                                            <h6 style="margin-right: 20px;">1. Did you recently visit any health institution such as hospital or clinic?</h6>
+                                            <fieldset class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="radioset1" id="yes1" value="option1">
+                                                            <label class="form-check-label" for="yes1">Yes</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                      <input class="form-check-input" type="radio" name="radioset1" id="no1" value="option2">
+                                                      <label class="form-check-label" for="no1">No</label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </fieldset>
+                                            <h6 style="margin-left: 30px;">If yes, what was the purpose of the visit?</h6>
+                                            <fieldset class="form-group" style="margin-left: 30px;">
+                                                <div class="row">
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="radioset2" id="patient" value="option1">
+                                                            <label class="form-check-label" for="patient">Patient</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                      <input class="form-check-input" type="radio" name="radioset2" id="employee" value="option2">
+                                                      <label class="form-check-label" for="employee">Employee</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                      <input class="form-check-input" type="radio" name="radioset2" id="others" value="option3">
+                                                      <label class="form-check-label" for="others">Others</label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </fieldset>
+                                            <h6 style="margin-left: 30px;">If visited as a patient, please answer the following:</h6>
+                                            <div class="row">
+                                                <div class="col-lg-5" style="margin-left: 30px;">
+                                                    <label><small><b>Name of Hospital:</b></small></label>                          
+                                                   <input type="text" name="hospital" class="form-control">
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <label><small><b>Address:</b></small></label>
+                                                    <input type="text" name="hospital_address" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-3" style="margin-left: 30px;">
+                                                    <label><small><b>Date Admitted:</b></small></label>                          
+                                                   <input type="text" name="date" class="form-control">
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <label><small><b>Date Discharged:</b></small></label>
+                                                    <input type="text" name="discharged" class="form-control">
+                                                </div>
+                                                <div class="col-lg-5">
+                                                    <label><small><b>Diagnosis:</b></small></label>
+                                                    <input type="text" name="diagnosis" class="form-control">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <h6 style="margin-right: 20px;">2. Did you take anti-fever medication during the last 4-6 hours?</h6>
+                                            <fieldset class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="radioset3" id="yes2" value="option1">
+                                                            <label class="form-check-label" for="yes2">Yes</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                      <input class="form-check-input" type="radio" name="radioset3" id="no2" value="option2">
+                                                      <label class="form-check-label" for="no2">No</label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </fieldset>
+                                            <h6 style="margin-right: 20px;">3. Have you been considered a suspect or probable case of COVID-19 by any health authority?</h6>
+                                            <fieldset class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="radioset4" id="yes3" value="option1">
+                                                            <label class="form-check-label" for="yes3">Yes</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                      <input class="form-check-input" type="radio" name="radioset4" id="no3" value="option2">
+                                                      <label class="form-check-label" for="no3">No</label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </fieldset>
+                                            <h6 style="margin-left: 30px;">If yes, have you undergone test for COVID-19(RT-PCR)?</h6>
+                                            <fieldset class="form-group" style="margin-left: 30px;">
+                                                <div class="row">
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="radioset5" id="yes4" value="option1">
+                                                            <label class="form-check-label" for="yes4">Yes</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                      <input class="form-check-input" type="radio" name="radioset5" id="no4" value="option2">
+                                                      <label class="form-check-label" for="no4">No</label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </fieldset>
+                                            <h6 style="margin-right: 20px;">4. Have you been in any other Countries/Provinces/Cities in the past 14 days?</h6>
+                                            <fieldset class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="radioset6" id="yes5" value="option1">
+                                                            <label class="form-check-label" for="yes5">Yes</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                      <input class="form-check-input" type="radio" name="radioset6" id="no5" value="option2">
+                                                      <label class="form-check-label" for="no5">No</label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </fieldset>
+                                            <h6 style="margin-left: 30px;">If yes, please specify:</h6>
+                                            <div class="col-lg-8">
+                                                <input type="text" name ="address" class="form-control">
+                                            </div>
+                                            <br>
+                                            <h6 style="margin-left: 30px;">Date of Arrival and Departure from the said place:</h6>
+                                            <div style="margin-left: 0px;"class="row">
+                                                <div class="col-lg-4">                            
+                                                   <input type="text" name="arrival" class="form-control" placeholder="Arrival">
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <input type="text" name="departure" class="form-control" placeholder="Departure">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <h6>5. Name of Sea Vessel:</h6>
+                                            <div style="margin-left: 0px;"class="row">
+                                                <div class="col-lg-6">                            
+                                                   <input type="text" name="vessel" class="form-control" >
+                                                </div>
+                                            </div>
+                                            <h6 style="margin-left: 30px;">Destination:</h6>
+                                            <fieldset style="margin-left: 30px;"class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="radioset7" id="buena" value="option1">
+                                                            <label class="form-check-label" for="buena">Buenavista</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                      <input class="form-check-input" type="radio" name="radioset7" id="jordan" value="option2">
+                                                      <label class="form-check-label" for="jordan">Jordan</label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    </body>
+</html>
